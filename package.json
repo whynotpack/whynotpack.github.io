@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Whynotpack markup builder",
   "main": "webpack.config.js",
-  "homepage": "https://github.com/codewhynot/whynotpack",
+  "repository": "https://github.com/whynotpack/whynotpack.github.io",
+  "deployBranch": "master",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
