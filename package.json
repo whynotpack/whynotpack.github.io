@@ -7,7 +7,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack",
     "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "deploy": "gh-pages -d build",
+    "deploy": "node ./config/cli/deploy.js",
     "add-component": "node ./config/cli/create-component.js",
     "add-page": "node ./config/cli/create-page.js"
   },
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
+    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
