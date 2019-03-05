@@ -1,3 +1,3 @@
-import {example} from "../components/example/example";
+import {docsJs} from "../components/docs/docs";
 
-example();
+docsJs();
