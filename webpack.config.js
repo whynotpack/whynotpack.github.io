@@ -5,7 +5,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
-const pagelist = require('./config/pages/pagelist');
+const pagelist = require('./app/core/config/pages/pagelist');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MODE = process.env.NODE_ENV;
 
@@ -26,6 +26,7 @@ const plugins = createPages().concat([
         $: "jquery",
         jQuery: "jquery",
     }),
+
     new HtmlWebpackInlineSVGPlugin({
         runPreEmit: true,
     }),
@@ -36,6 +37,7 @@ const plugins = createPages().concat([
     new webpack.HotModuleReplacementPlugin(),
     new BrowserSyncPlugin({
         proxy: 'http://localhost:8080/',
+        open: false
     }),
 ]);
 
@@ -72,7 +74,7 @@ module.exports = (env, argv) => {
                             query: {
                                 partialDirs: [
                                     resolve(__dirname, 'app', 'components'),
-                                    resolve(__dirname,'config','helpers')
+                                    resolve(__dirname,'app','core','helpers')
                                 ],
                             }
                         },
@@ -106,6 +108,9 @@ module.exports = (env, argv) => {
                                     autoprefixer({
                                         browsers:['ie >= 8', 'last 4 version']
                                     }),
+                                    require('cssnano')({
+                                        preset: 'default',
+                                    }),
                                 ],
                             },
                         },
@@ -124,7 +129,7 @@ module.exports = (env, argv) => {
                 './assets/styles/main.scss'
             ],
         },
-        devtool: MODE === '',
+        devtool: MODE === 'development' ? 'eval' : 'source-map' ,
         plugins: plugins,
         resolve: {
             alias: {

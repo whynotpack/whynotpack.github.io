@@ -1,23 +1,19 @@
 {
-  "name": "@codewhynot/whynotpack",
+  "name": "whynotpack",
   "version": "1.0.0",
   "description": "Whynotpack markup builder",
   "main": "webpack.config.js",
-  "repository": "https://github.com/whynotpack/whynotpack.github.io",
-  "deployBranch": "master",
-  "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server",
-    "deploy": "node ./config/cli/deploy.js",
-    "add-component": "node ./config/cli/create-component.js",
-    "add-page": "node ./config/cli/create-page.js"
-  },
   "keywords": [],
   "author": "codewhynot",
+  "repository": "https://github.com/whynotpack/whynotpack.github.io",
+  "deployBranch": "master",
   "license": "ISC",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "cross-env NODE_ENV=production webpack"
+  },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
-    "gh-pages": "^2.0.1",
     "jquery": "^3.3.1"
   },
   "devDependencies": {
@@ -30,6 +26,8 @@
     "browser-sync-webpack-plugin": "^2.2.2",
     "copy-webpack-plugin": "^5.0.0",
     "css-loader": "^2.1.0",
+    "cssnano": "^4.1.10",
+    "gh-pages": "^2.0.1",
     "handlebars": "^4.1.0",
     "handlebars-loader": "^1.7.1",
     "html-loader": "^0.5.5",
@@ -37,6 +35,7 @@
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.10",
     "postcss-loader": "^3.0.0",
     "prompt": "^1.0.0",
     "styles-loader": "^1.0.0",
