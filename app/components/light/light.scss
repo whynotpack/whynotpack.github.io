@@ -44,8 +44,12 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-bottom: 5px;
           &:hover {
             color: lighten(#292929, 20%);
+            svg {
+              fill: lighten(#292929, 20%);
+            }
           }
           svg {
             width: 100%;

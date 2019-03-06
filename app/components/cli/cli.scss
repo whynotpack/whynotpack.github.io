@@ -1,0 +1,18 @@
+.cli {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  &__title {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__description {
+    text-align: center;
+    span {
+      font-weight: 500;
+    }
+  }
+}
