@@ -1,0 +1,44 @@
+.burger {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  @include min(768) {
+    display: none;
+  }
+  &__icon {
+    width: 45px;
+    height: 45px;
+    background: $background;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ff0;
+    .menuIsOpen & {
+      background: lighten($background, 5%);
+    }
+  }
+  &__open,
+  &__close {
+    width: 100%;
+    height: 100%;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__open {
+    padding: 10px;
+    .menuIsOpen & {
+      display: none;
+    }
+  }
+  &__close {
+    display: none;
+    padding: 15px;
+    .menuIsOpen & {
+      display: flex;
+    }
+  }
+}

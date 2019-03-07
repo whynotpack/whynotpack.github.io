@@ -13,12 +13,14 @@
 
 class Sidebar {
     constructor () {
+        this.mainSelector = $('body');
         this.customEvent = new CustomEvent('tabChange');
         this.href = null;
     }
     getHref (event) {
         const target = $(event.target);
         const href = target.attr('href');
+        this.mainSelector.removeClass('menuIsOpen');
         if (href !== '/') {
             this.href = href;
             window.dispatchEvent(this.customEvent);
@@ -32,7 +34,7 @@ class Sidebar {
     }
 
     handlersInit () {
-        const links = document.querySelectorAll('.sidebar__item');
+        const links = document.querySelectorAll('.sidebar__item a');
         [...links].forEach(link => {
             link.addEventListener('click', this.getHref.bind(this));
         })

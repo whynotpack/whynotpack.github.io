@@ -1,7 +1,6 @@
 class Tabs {
-    constructor (initTab) {
+    constructor () {
         this.tabs = $('.tabs');
-        this.default = initTab;
     }
     addClass (tab) {
         this.tabs.find('.tabs__tab').removeClass('currentTab');
@@ -11,20 +10,11 @@ class Tabs {
         const location = window.location.href;
         const hash = location.split('#');
         const tab = data ? data : `#${hash[1]}`;
-        if (!data) {
-            if (tab !== undefined) {
-                this.addClass(this.default)
-            } else {
-                return false;
-            }
+        if (tab !== undefined) {
+            this.addClass(tab)
         } else {
-            if (tab !== undefined) {
-                this.addClass(tab)
-            } else {
-                return false;
-            }
+            return false;
         }
-
     }
 }
 
