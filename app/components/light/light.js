@@ -1,7 +1,7 @@
 const lightToggle = () => {
-    let button = $('.light');
+    let button = $('.light__icon');
     button.click(function () {
-       $(this).find('.light__menu').toggleClass('visible');
+       $(this).siblings('.light__menu').toggleClass('visible');
     });
 };
 

@@ -21,6 +21,14 @@ code {
   color: #323232;
   text-align: center;
   font-size: 16px;
+  user-select: all!important;
+  &.inline {
+    display: inline-block;
+  }
+  &.dark {
+    background: $background;
+    color: #d0d0d0;
+  }
   @include max(600) {
     padding: 8px;
     font-size: 12px;

@@ -1,3 +1,7 @@
-import {docsJs} from "../components/docs/docs";
+import {Docs} from "../components/docs/docs";
 
-docsJs();
+//variables
+const docsPage = new Docs();
+
+//functions
+docsPage.start();

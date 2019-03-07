@@ -1,5 +1,5 @@
-const example = () => {
+const intro = () => {
     console.log('Welcome to Whynotpack');
 };
 
-export {example};
+export {intro};
