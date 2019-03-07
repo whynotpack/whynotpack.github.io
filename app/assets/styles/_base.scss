@@ -9,6 +9,9 @@ body {
   font-family: $roboto;
   font-weight: 300;
   color: #323232;
+  &.menuIsOpen {
+    overflow: hidden!important;
+  }
 }
 
 code {

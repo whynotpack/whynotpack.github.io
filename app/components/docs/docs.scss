@@ -12,5 +12,8 @@
   &__grid {
     height: 100vh;
     display: flex;
+    @include max(767) {
+      height: auto;
+    }
   }
 }
