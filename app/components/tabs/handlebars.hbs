@@ -1,6 +1,15 @@
 <div class="tabs__tab" id="handlebars">
-    <div class="tabs__title">Компоненты handlebars</div>
+    <div class="tabs__title">Компоненты</div>
     <div class="tabs__description">
-
+        <p>Шаблонизатор <b>handlebars</b> обрабатывает файлы с расширением <b>.hbs</b>, в папках:</p>
+        <ul>
+            <li>app/pages</li>
+            <li>app/components</li>
+            <li>app/core/helpers</li>
+        </ul>
+        <p>Компоненты импортируются посредством шорткода например:</p>
+        <code class="inline dark"><span>{</span><span>{</span><span>></span> componentFolder/componentName<span>}</span><span>}</span></code>
+        <p>Если в папке <b>app/components</b> находится папка с компонентом <b>test</b>, то импортировать данный компонент можно <b>в любой .hbs файл</b>, посредством шорткода:</p>
+        <code class="inline dark"><span>{</span><span>{</span><span>></span> test/test<span>}</span><span>}</span></code>
     </div>
 </div>

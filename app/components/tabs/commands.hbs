@@ -1,6 +1,27 @@
 <div class="tabs__tab" id="available_commands">
     <div class="tabs__title">Доступные команды</div>
     <div class="tabs__description">
+        <code class="inline dark">wnp init</code>
+        <p>Данная команда разворачивает <b>wnp</b> в текущую папку, и устанавливает нужные для работы зависимости.</p>
+        <code class="inline dark">wnp dev</code>
+        <p>Данная команда запускает <b>webpack-dev-server</b>, с текущим проектом, который будет доступен по адресу <a href="http://localhost:3000">http://localhost:3000</a>  по умолчанию.</p>
+        <code class="inline dark">wnp build</code>
+        <p>Данная команда компилирует весь проект в папку <b>build</b>, на выходе вы получаете <b>html</b> страницы, минифицированные <b> css и js файлы, с map файлами </b> для удобного дебагинга, и конечно же папку <b>assets с контентом</b>.</p>
+        <code class="inline dark">wnp add-component</code>
+        <p>Данная команда создаёт новый компонент по пути <b> app/components</b>, компонент состоит из трёх файлов:</p>
 
+        <ul>
+            <li>component.hbs <b>(handlebars файл)</b></li>
+            <li>component.js <b>(JavaScript файл)</b></li>
+            <li>component.scss <b>(стилевой файл)</b></li>
+        </ul>
+
+        <p>А так же автоматически импортирует стилевой файл компонента в главный стилевой файл.</p>
+        <code class="inline dark">wnp add-page</code>
+        <p>Данная команда создаёт новую страницу <b> (handlebars файл) </b> по пути <b> app/pages</b> и регистрирует её в конфиг файл. Так же перезапускает <b>webpack-dev-server</b>, что бы webpack начал обрабатывать новую страницу.</p>
+        <code class="inline dark">wnp deploy</code>
+        <p>Данная команда публицирует вашу <b>build</b> папку на в ваш репозиторий, на ветку <b>gh-pages</b>, если вы предварительно указали <b>url</b> вашего репозитория в файле <b>package.json</b>. Если вы не указывали адрес вашего репозитория, <b>wnp</b> попросит вас указать адрес и выполнит команду.</p>
+        <code class="inline dark">wnp help</code>
+        <p>Данная команда отображает список доступных команд.</p>
     </div>
 </div>

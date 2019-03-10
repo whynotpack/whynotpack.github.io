@@ -7,6 +7,9 @@
     top: 0;
     left: 0;
   }
+  code {
+    margin-bottom: 15px;
+  }
   &__tab {
     padding: 20px 40px;
     opacity: 0;
@@ -26,7 +29,7 @@
       padding: 10px 20px;
     }
     @include max(767) {
-      padding-top: 100px;
+      padding-top: 75px;
     }
   }
   &__title {
@@ -36,20 +39,49 @@
     margin-bottom: 40px;
     user-select: none;
     @include max(767) {
-      font-size: 32px;
-      margin-bottom: 30px;
+      font-size: 26px;
+      margin-bottom: 15px;
     }
   }
   &__description {
+    b {
+      color: lighten($background, 15%);
+      font-family: $roboto;
+      font-weight: 500;
+    }
     p {
       margin-bottom: 15px;
       user-select: none;
+      line-height: 1.5;
       @include max(767) {
         font-size: 14px;
+        line-height: 1.75;
+        margin-bottom: 5px;
       }
       &:last-child {
         margin-bottom: 0;
       }
+    }
+    ul,
+    ol {
+      padding-left: 20px;
+      margin: 20px 0;
+      li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        user-select: none;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        @include max(767) {
+          font-size: 14px;
+          line-height: 1.75;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    ul {
+      list-style: circle;
     }
   }
 }
