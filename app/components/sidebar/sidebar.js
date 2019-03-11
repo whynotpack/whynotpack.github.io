@@ -26,6 +26,16 @@ class Sidebar {
             window.dispatchEvent(this.customEvent);
         }
     }
+    setActive (data) {
+        let selector = $('.sidebar');
+        let links = selector.find('.sidebar__link');
+        $('.sidebar__item').removeClass('active');
+        links.each((i,link) => {
+            if ($(link).attr('href') === data) {
+                $(link).parent().addClass('active');
+            }
+        })
+    }
 
     onClick (callback) {
         window.addEventListener('tabChange', () => {

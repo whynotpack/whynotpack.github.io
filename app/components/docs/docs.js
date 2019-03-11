@@ -20,7 +20,8 @@ class Docs {
         this.lightButtonInit();
         this.burgerButtonInit();
         this.sidebar.handlersInit();   
-        this.tabs.setTab();     
+        this.tabs.setTab();
+        this.sidebar.setActive(this.tabs.getTab());
     }
     start () {
         if (this.selector.length <= 0) return false;
@@ -28,6 +29,7 @@ class Docs {
         this.updateState();
         this.sidebar.onClick(href => {
             this.tabs.setTab(href);
+            this.sidebar.setActive(href);
         })
     }
 }

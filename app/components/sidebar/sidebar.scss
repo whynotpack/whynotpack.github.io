@@ -33,6 +33,9 @@
     width: 0;
   }
   &__item {
+    &.active {
+      background: lighten($background, 5%);
+    }
     &.dark {
       background: darken(rgba(66,66,66,.46), 5%);
     }
