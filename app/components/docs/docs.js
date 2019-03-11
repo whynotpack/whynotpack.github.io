@@ -11,9 +11,10 @@ class Docs {
         this.lightButtonInit = lightToggle;
         this.burgerButtonInit = burgerToggle;
     }
-    updateState (event) {
+    updateState () {
         window.onhashchange = () => {
             this.tabs.setTab();
+            this.sidebar.setActive(this.tabs.getTab());
         } 
     }
     init () {
