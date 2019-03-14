@@ -3,6 +3,7 @@ import {burgerToggle} from "../burger/burger";
 import {Tabs} from "../tabs/tabs";
 import {Sidebar} from "../sidebar/sidebar";
 
+
 class Docs {
     constructor () {
         this.selector = $('.docs');
