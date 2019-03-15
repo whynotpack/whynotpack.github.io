@@ -6,7 +6,7 @@ class Tabs {
         this.tabs = $('.tabs');
         this.input = this.tabs.find('input');
         this.codeElems = this.tabs.find('code');
-        this.notify = new Notify({autoDelete: true, showTime: 3, maxCount: 3});
+        this.notify = new Notify({max_count: 1});
 
         //init notifies and clicks
         this.copyCommand();
@@ -23,7 +23,10 @@ class Tabs {
             const text = $(this).text();
             input.val(text).select();
             document.execCommand("copy");
-            notify.message('s', `Скопировано в буфер`);
+            notify({
+                type: 'success',
+                title: 'Скопировано в буфер'
+            });
         });
     }
 
