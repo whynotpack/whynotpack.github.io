@@ -28,7 +28,9 @@ class Tabs {
                 type: 'success',
                 title: 'Скопировано в буфер',
                 description: `Команда: ${text}`,
-                link_title: 'Показать'
+                link_title: 'Показать',
+                auto_delete: true,
+                delay: 4
             });
         });
     }

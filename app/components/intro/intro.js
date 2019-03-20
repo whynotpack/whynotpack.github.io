@@ -9,8 +9,8 @@ const intro = () => {
         title: 'Добро пожаловать!',
         description: `Whynotpack - быстрый и лёгкий сборщик для Вашей вёрстки. Если хотите познакомиться с Whynotpack поближе, нажмите на кнопку "Документация"`,
         link_title: 'Показать',
-        auto_delete: false,
-        delay: 20
+        auto_delete: true,
+        delay: 10
     });
     const codeElems = selector.find('code');
     const input = selector.find('input');
