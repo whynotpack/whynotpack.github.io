@@ -4,9 +4,10 @@ import {Notify} from "@wnp/notify";
 class Tabs {
     constructor () {
         this.tabs = $('.tabs');
+        if (this.tabs.length <= 0) return false;
         this.input = this.tabs.find('input');
         this.codeElems = this.tabs.find('code');
-        this.notify = new Notify({max_count: 1});
+        this.notify = new Notify({max_count: 1, auto_delete: true, delay: 3});
 
         //init notifies and clicks
         this.copyCommand();
@@ -25,7 +26,9 @@ class Tabs {
             document.execCommand("copy");
             notify({
                 type: 'success',
-                title: 'Скопировано в буфер'
+                title: 'Скопировано в буфер',
+                description: `Команда: ${text}`,
+                link_title: 'Показать'
             });
         });
     }
